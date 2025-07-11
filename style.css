@@ -1,0 +1,105 @@
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .text-gold {
+    color: #d4af37;
+  }
+  
+  .btn-gold {
+    background-color: #d4af37;
+    color: #000;
+    font-weight: bold;
+  }
+  
+  .btn-gold:hover {
+    background-color: #b38e2d;
+    color: white;
+  }
+  
+  form, h3 {
+    border-left: 5px solid #d4af37;
+  }
+  
+  .list-group-item {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #444;
+  }
+
+  /* Estética del contenedor a capturar */
+.captura-container {
+    background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+    border: 2px solid #d4af37;
+    color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Ítems de la lista más limpios */
+  .list-group-item {
+    background-color: #181818;
+    border: 1px solid #333;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 10px 15px;
+    font-size: 15px;
+  }
+  #lista-citas {
+    max-height: 300px;     /* Ajusta la altura máxima a tu gusto */
+    overflow-y: auto;      /* Agrega scroll vertical si se llena */
+    padding-right: 10px;   /* Espacio para que no se corte el texto */
+    scrollbar-width: thin; /* Estilo en navegadores Firefox */
+  }
+/* Scroll moderno solo para navegadores Webkit (Chrome, Opera, Edge) */
+#lista-citas::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  #lista-citas::-webkit-scrollbar-thumb {
+    background: #d4af37;
+    border-radius: 10px;
+  }
+  
+  #lista-citas::-webkit-scrollbar-track {
+    background: #2a2a2a;
+  }
+   
+  /*Estilo de cada cuadro*/
+  .cuadros-animados span {
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: #d4af37;
+    border-radius: 80%;
+    opacity: 0.1;
+    box-shadow: 0 0 10px #d4af37, 0 0 20px #d4af37;
+    animation: flotar 20s linear infinite;
+    top: 100%;
+  }
+  /*Animacion par el background*/
+  @keyframes flotar {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(-110vh) rotate(360deg);
+      opacity: 0;
+    }
+  }
+
+/* pocision aleatoria de cada cuadro*/
+.cuadros-animados span:nth-child(1){ left: 10%; animation-delay: 0s;}
+.cuadros-animados span:nth-child(2){ left: 25%; animation-delay: 3s;}
+.cuadros-animados span:nth-child(3){ left: 40%; animation-delay: 6s;}
+.cuadros-animados span:nth-child(4){ left: 55%; animation-delay: 1s;}
+.cuadros-animados span:nth-child(5){ left: 70%; animation-delay: 4s;}
+.cuadros-animados span:nth-child(6){ left: 85%; animation-delay: 2s;}
+.cuadros-animados span:nth-child(7){ left: 30%; animation-delay: 7s;}
+.cuadros-animados span:nth-child(8){ left: 60%; animation-delay: 5s;}
+

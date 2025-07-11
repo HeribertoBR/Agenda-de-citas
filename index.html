@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💈Agenda tu cita - Nombre del negocio</title>
+    <!--se trabajará con boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="cuadros-animados">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="container py-5">
+        <h1 class="text-center text-gold mb-4" style="font-family: monospace;">
+            💈NOMBRE- AGENDA TU CITA
+        </h1>
+        <!--Alerta con boostrap-->
+        <div id="alerta" class="alert d-none" role="alert"></div>
+        <!--Formulario para agendar-->
+        <form id="form-cita" class="bg-dark p-4 rounded shadow-lg">
+            <div class="mb-3">
+                <label class="form-label text-white">Nombre Completo</label>
+                <input type="text" class="form-control" id="nombre" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label text-white">Fecha y hora</label>
+                <input type="datetime-local" class="form-control" id="fecha" required />
+            </div>
+
+            <div class="mb-3">
+                <label for="" class="form-label text-white">Servicio</label>
+                <select class="form-select" id="servicio" required>
+                    <option value="">Selecciona un servicio</option>
+                    <option value="Corte de cabello">✂️ Corte de cabello</option>
+                    <option value="Barba">🧔 Arreglo de barba</option>
+                    <option value="Corte + Barba">🔥 Corte + Barba</option>
+                    <option value="Diseño de cejas">👁️ Diseño de cejas</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Número de teléfono</label>
+                <input type="tel" class="form-control" id="telefono" />
+            </div>
+
+            <button type="submit" class="btn btn-gold w-100">Agendar Cita</button>
+        </form>
+
+        <!--Lista de citas agendadas-->
+        <div id="captura" class="captura-container mt-4 p-4 rounded shadow">
+            <h3 class="text-white">📅 Citas agendadas</h3>
+            <ul id="lista-citas" class="list-group mt-3"></ul>
+          </div>
+          
+          <div class="text-center mt-4">
+            <button onclick="generarPDFCitas()" class="btn btn-outline-warning">
+              📄 Descargar PDF con todas las citas
+            </button>
+          </div>
+          
+      
+
+    <script src="script.js"></script>
+</body>
+</html>l
