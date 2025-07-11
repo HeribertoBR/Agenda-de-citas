@@ -5,4 +5,4 @@
 - Agenden su cita
 Se guarda en el navegador (localStorage) o exporta como lista.
 
-![Vista previa del proyecto](./demo.png)
+![Vista previa del proyecto](demo.png)
