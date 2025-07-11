@@ -3,5 +3,6 @@
 - Seleccionen fecha/hora
 - Elijan servicio
 - Agenden su cita
-🎨 Se guarda en el navegador (localStorage) o exporta como lista.
+Se guarda en el navegador (localStorage) o exporta como lista.
+
 ![Vista previa del proyecto](./demo.png)
